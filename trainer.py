@@ -46,9 +46,7 @@ class Trainer:
         print("Are you sure to remove ", self.model_name, "?[yes/no]")
         if input() == "yes":
             if os.path.exists(self.model_path):
-                # 获取文件夹中所有文件的列表
                 file_list = os.listdir(self.model_path)
-                # 遍历文件列表并删除每个文件
                 for file_name in file_list:
                     file_path = os.path.join(self.model_path, file_name)
                     try:
